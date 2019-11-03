@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+<style>
+
+html {
+  background-image: url('https://www.transizion.com/wp-content/uploads/2018/06/writing-rpi-Rensselaer-Polytechnic-Institute-supplemental-essays.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 100%;
+  width:100%;
+  background-size: cover;
+  position:sticky;
+}
+
+.header {
+  padding: 13px;
+  text-align: center;
+  background: red;
+  color: white;
+  font-size: 15px;
+  font-family: "Times New Roman", Times, serif;
+
+
+</style>
+
+<div class="header">
+<h1>MyTutor: Session Adder</h1>
+</div>
+<div class="w3-display-topright">
+<img src="https://teenlife.s3.amazonaws.com/media/uploads/listings/5xrhVoCLZepi.png" alt="RPI Logo" width=100px height=100px>
+</div>
+
+<div class="w3-bar">
+<a href="/" class="w3-bar-item w3-button w3-xlarge w3-black w3-border-right w3-mobile w3-text-white" style="width:33%">Home</a>
+<a href="/find_tutors\" class="w3-bar-item w3-button w3-xlarge w3-black w3-border-right w3-mobile w3-text-white" style="width:33%">For Students</a>
+<a href="/for_teachers\" class="w3-bar-item w3-button w3-xlarge w3-black w3-border-right w3-mobile w3-text-white" style="width:34%">For Teachers</a>
+</div>
+<h2 style="text-align:left;color:black; padding-left:20px">Add Session</h2>
+
+<br>
+<form action="/submit\" class="w3-container" method="post">{% csrf_token %}
+	<label for="Course"></label>
+	<input id="Course" placeholder="Course" class="w3-input w3-border" type="text">
+<br>
+	<label for="Day"></label>
+	<input id="Day" placeholder="Day" class="w3-input w3-border" type="text">
+<br>
+	<label for="Time"></label>
+	<input id="Time" placeholder="Time" class="w3-input w3-border" type="text">
+	<select id="timeOfDay">
+		<option value ="AM">AM</option>
+		<option value ="PM">PM</option>
+	</select>
+<br>
+<input id="Location" placeholder="Location" class="w3-input w3-border" type="text">
+
+<br>
+<input type="submit" value="ADD">
+</form>
+
+<br>
+<br>
+
+
+</body>
+</html>
